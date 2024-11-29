@@ -45,36 +45,3 @@ data_panen = {
 print("Data Panen")
 for key, value in data_panen.items():
     print(key, value)
-
- # 2. Menampilkan jumlah hasil panen jagung dari lokasi2
-print(f"\nHasil Panen Jagung dari lokasi2: {data_panen['lokasi2']['hasil_panen']['jagung']}")
-
-# 3. Menampilkan nama lokasi dari lokasi3
-print(f"\nNama Lokasi dari lokasi3: {data_panen['lokasi3']['nama_lokasi']}")
-
-# 4. Masukkan jumlah hasil panen padi dan kedelai ke dalam variabel yang berbeda
-# 5. buat variabel terpisah untuk menyimpan jumlah hasil panen padi dan kedelai dari setiap lokasi
-jumlah_padi = {key: value['hasil_panen']['padi'] for key, value in data_panen.items()}
-jumlah_kedelai = {key: value['hasil_panen']['kedelai'] for key, value in data_panen.items()}
-
-print("\njumlah Padi : ")
-for key, value in jumlah_padi.items():
-    print(key, value)
-
-print("\njumlah Kedelai : ")
-for key, value in jumlah_kedelai.items():
-    print(key, value)
-
-# 6. Buat percabangan
-print("\nKondisi Lokasi:")
-for key, value in data_panen.items():
-    nama_lokasi = value['nama_lokasi']
-    padi = value['hasil_panen']['padi']
-    jagung = value['hasil_panen']['jagung']
-    
-    if padi > 1300 or jagung > 800:
-        print(f"{nama_lokasi} memerlukan perhatian khusus.")
-    else:
-        print(f"{nama_lokasi} dalam kondisi baik.")
-
-print ("Auril Putri Amanda")
